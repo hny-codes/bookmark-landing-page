@@ -1,9 +1,10 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '@/components/Navbar';
 
 const pageTitle = 'Bookmark';
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <h1>Astro</h1>
+  <Navbar client:load />
 </BaseLayout>
