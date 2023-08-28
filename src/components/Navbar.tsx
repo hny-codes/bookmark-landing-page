@@ -109,7 +109,7 @@ export default function Navbar() {
           </div>
 
           {/* Desktop */}
-          <div>
+          <div data-test="desktop-nav-items" className='sm:block hidden'>
             <div className='flex items-center gap-7 uppercase text-[--clr-very-dark-blue'>
               <a href='#' className='py-2 px-3'>
                 Features
