@@ -9,7 +9,7 @@ export default function Navbar() {
 
   return (
     <nav className=''>
-      <div className='layout-padding'>
+      <div className='layout-padding sm:max-w-[--max-w] sm:mx-auto'>
         {/* Mobile */}
         <div className='flex items-center justify-between'>
           {/* Logo */}
@@ -31,7 +31,11 @@ export default function Navbar() {
           </svg>
 
           {/* Hamburger */}
-          <button data-test='menu-open' onClick={handleClick}>
+          <button
+            data-test='menu-open'
+            onClick={handleClick}
+            className='sm:hidden'
+          >
             <svg xmlns='http://www.w3.org/2000/svg' width='18' height='15'>
               <path
                 fill='#242A45'
@@ -46,7 +50,7 @@ export default function Navbar() {
             data-test='menu'
             className={`${
               menu ? 'visible' : 'invisible'
-            } bg-[--clr-very-dark-blue-opacity] absolute w-full h-full left-0 top-0 text-white`}
+            } bg-[--clr-very-dark-blue-opacity] absolute w-full h-full left-0 top-0 text-white sm:hidden`}
           >
             <div className='flex items-center justify-between layout-padding'>
               {/* Menu Logo */}
@@ -103,9 +107,28 @@ export default function Navbar() {
               </li>
             </ul>
           </div>
-        </div>
 
-        {/* Desktop */}
+          {/* Desktop */}
+          <div>
+            <div className='flex items-center gap-7 uppercase text-[--clr-very-dark-blue'>
+              <a href='#' className='py-2 px-3'>
+                Features
+              </a>
+              <a href='#' className='py-2 px-3'>
+                Pricing
+              </a>
+              <a href='#' className='py-2 px-3'>
+                Contact
+              </a>
+              <a
+                href='#'
+                className='bg-[--clr-soft-red] py-2 px-8 rounded-md text-white'
+              >
+                Login
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </nav>
   );
