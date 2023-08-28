@@ -53,6 +53,9 @@
 
     --clr-grayish-blue: hsl(229, 8%, 60%);
     --clr-very-dark-blue: hsl(229, 31%, 21%);
+    --clr-very-dark-blue-opacity: hsl(229, 31%, 21%, 0.9);
+
+    --max-w: 1440px;
   }
 
   .dark {
@@ -92,5 +95,15 @@
   }
   body {
     @apply bg-background text-foreground font-rubik;
+  }
+}
+
+@layer utilities {
+  .layout-padding {
+    @apply p-8;
+  }
+
+  .menu-hover {
+    @apply hover:text-[--clr-soft-red] transition;
   }
 }
