@@ -82,17 +82,17 @@ export default function Navbar() {
               </button>
             </div>
             <ul className='flex flex-col place-items-center gap-4 text-2xl uppercase tracking-widest text-center px-8 py-4'>
-              <li className='border-t border-[--clr-grayish-blue] w-full pt-4'>
+              <li className='border-t border-[--clr-grayish-blue] w-full pt-4 menu-hover'>
                 <a href='#' className='inline-block w-full'>
                   Features
                 </a>
               </li>
-              <li className='border-t border-[--clr-grayish-blue] w-full pt-4 inline-block'>
+              <li className='border-t border-[--clr-grayish-blue] w-full pt-4 inline-block menu-hover'>
                 <a href='#' className='inline-block w-full'>
                   Pricing
                 </a>
               </li>
-              <li className='border-t border-b border-[--clr-grayish-blue] w-full py-4'>
+              <li className='border-t border-b border-[--clr-grayish-blue] w-full py-4 menu-hover'>
                 <a href='#' className='inline-block w-full'>
                   Contact
                 </a>
@@ -100,7 +100,7 @@ export default function Navbar() {
               <li className='mt-4 w-full'>
                 <a
                   href='#'
-                  className='py-2 outline rounded-lg flex-grow inline-block w-full'
+                  className='py-2 outline rounded-lg flex-grow inline-block w-full hover:bg-white hover:text-[--clr-very-dark-blue] transition'
                 >
                   Login
                 </a>
@@ -109,20 +109,20 @@ export default function Navbar() {
           </div>
 
           {/* Desktop */}
-          <div data-test="desktop-nav-items" className='sm:block hidden'>
+          <div data-test='desktop-nav-items' className='sm:block hidden'>
             <div className='flex items-center gap-7 uppercase text-[--clr-very-dark-blue'>
-              <a href='#' className='py-2 px-3'>
+              <a href='#' className='py-2 px-3 menu-hover'>
                 Features
               </a>
-              <a href='#' className='py-2 px-3'>
+              <a href='#' className='py-2 px-3 menu-hover'>
                 Pricing
               </a>
-              <a href='#' className='py-2 px-3'>
+              <a href='#' className='py-2 px-3 menu-hover'>
                 Contact
               </a>
               <a
                 href='#'
-                className='bg-[--clr-soft-red] py-2 px-8 rounded-md text-white'
+                className='bg-[--clr-soft-red] py-2 px-8 rounded-md text-white hover:bg-white hover:text-[--clr-soft-red] border-2 transition border-[--clr-soft-red]'
               >
                 Login
               </a>
