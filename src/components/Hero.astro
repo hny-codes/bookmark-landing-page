@@ -1,8 +1,11 @@
 ---
+import { Button } from '@/components/ui/button';
 ---
 
 <main>
-  <div class='grid grid-rows-2 sm:grid-cols-2 sm:max-w-[--max-w] sm:mx-auto sm:layout-padding'>
+  <div
+    class='grid grid-rows-2 sm:grid-cols-2 sm:max-w-[--max-w] sm:mx-auto sm:layout-padding'
+  >
     <!-- illus -->
     <div class='relative sm:order-2 sm:left-24'>
       <img src='/images/illustration-hero.svg' alt='hero image' />
@@ -14,6 +17,12 @@
         A clean and simple interface to organize your favourite websites. Open a
         new browser tab and see your sites load instantly. Try it for free.
       </p>
+      <div class="mt-6 [&>*]:mx-2 sm:[&>*]:ml-0 sm:[&>*]:mr-4">
+        <Button variant={'btnPrimary'} size={'main'}>Get it on Chrome</Button>
+        <Button variant={'btnSecondary'} size={'main'}>
+          Get it on Firefox
+        </Button>
+      </div>
     </div>
   </div>
 </main>
