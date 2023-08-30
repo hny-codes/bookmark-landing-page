@@ -1,0 +1,16 @@
+---
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import TabFeature from './TabFeature';
+---
+
+<div class='mt-20 mb-20 text-center'>
+  <div class="mb-4">
+    <h1 class='text-3xl font-bold text-[--clr-very-dark-blue] mb-4'>Features</h1>
+    <p class='text-[--clr-grayish-blue] leading-7 w-[90%] mx-auto'>
+      Our aim is to make it quick and easy for you to access your favourite
+      websites. Your bookmarks sync between your devices so you can access them
+      on the go.
+    </p>
+  </div>
+  <TabFeature client:load/>
+</div>
