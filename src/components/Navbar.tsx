@@ -9,7 +9,7 @@ export default function Navbar() {
 
   return (
     <nav className=''>
-      <div className='layout-padding sm:max-w-[--max-w] sm:mx-auto'>
+      <div className='layout-padding sm:max-w-[--max-w] sm:mx-auto fixed sm:relative top-0 w-full z-50'>
         {/* Mobile */}
         <div className='flex items-center justify-between'>
           {/* Logo */}
@@ -50,7 +50,7 @@ export default function Navbar() {
             data-test='menu'
             className={`${
               menu ? 'visible' : 'invisible'
-            } bg-[--clr-very-dark-blue-opacity] absolute w-full h-full left-0 top-0 text-white sm:hidden`}
+            } bg-[--clr-very-dark-blue-opacity] fixed w-full h-full left-0 top-0 text-white sm:hidden`}
           >
             <div className='flex items-center justify-between layout-padding'>
               {/* Menu Logo */}
