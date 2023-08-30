@@ -32,4 +32,16 @@ describe('Bookmark Tests', { retries: 5 }, () => {
     cy.viewport(1000, 660);
     cy.get('[data-test="desktop-nav-items"]').should('be.visible');
   });
+
+  it('Hero Section', () => {
+    const header = /A Simple Bookmark Manager/i;
+    const subtext =
+      /A clean and simple interface to organize your favourite websites./i;
+
+    // Make sure Hero component is present
+    cy.get('[data-test="hero-header"]').contains(header);
+    cy.get('[data-test="hero-subheader"]').contains(subtext);
+    cy.get('[data-test="hero-btn"]').contains(/Get it on Chrome/i);
+    cy.get('[data-test="hero-btn-secondary"]').contains(/Get it on Firefox/i);
+  });
 });
