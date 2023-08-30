@@ -7,6 +7,6 @@
     "paths": {
       "@/*": ["src/*"]
     },
-    "module": "CommonJS"
+    "module": "ES2015"
   }
 }
