@@ -110,4 +110,20 @@
   .hero-bg {
     @apply before:content-[''] before:bg-[--clr-soft-blue] before:w-full before:h-4/5 before:absolute before:top-16 before:-z-10 before:rounded-tl-full before:rounded-bl-full before:left-16 sm:before:top-28;
   }
+
+  .illus-bg {
+    @apply before:content-[''] before:bg-[--clr-soft-blue] before:w-full before:h-full before:absolute before:top-9 before:-z-10 before:rounded-tr-full before:rounded-br-full before:-left-16 sm:before:top-28;
+  }
+
+  .divider-top {
+    @apply before:content-[''] before:absolute before:bg-[--clr-grayish-blue] before:w-full before:h-[1px] before:left-0 before:-top-2; 
+  }
+
+  .divider-bottom {
+    @apply after:content-[''] after:absolute after:bg-[--clr-grayish-blue] after:w-full after:h-[1px] after:left-0 after:-bottom-3; 
+  }
+
+  .tab-bar {
+    @apply after:content-[''] after:absolute after:bg-[--clr-soft-red] after:w-5/12 after:mx-auto after:h-[5px] after:left-0 after:right-0 after:-bottom-3;
+  }
 }
