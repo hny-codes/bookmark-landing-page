@@ -10,16 +10,24 @@ export default function TabFeature() {
       className='p-8'
       onValueChange={(value) => setTabValue(value)}
     >
-      <Tabs.List className='flex flex-col gap-6 mb-14 [&>*]:py-2'>
-        <Tabs.Trigger value='simple' className='relative' data-test='tab-1'>
+      <Tabs.List className='flex flex-col sm:flex-row sm:justify-evenly sm:w-2/3 sm:mx-auto gap-6 sm:gap-0 mb-14 [&>*]:py-2'>
+        <Tabs.Trigger
+          value='simple'
+          className='relative sm:w-full'
+          data-test='tab-1'
+        >
           Simple Bookmarking
-          <span className='divider-top divider-bottom'></span>
+          <span className='divider-top divider-bottom sm:before:w-0'></span>
           <span
             className={`${tabValue === 'simple' && 'tab-bar'}`}
             data-test='tab-active-1'
           ></span>
         </Tabs.Trigger>
-        <Tabs.Trigger value='speedy' className='relative' data-test='tab-2'>
+        <Tabs.Trigger
+          value='speedy'
+          className='relative sm:w-full'
+          data-test='tab-2'
+        >
           Speedy Searching
           <span className='divider-bottom'></span>
           <span
@@ -27,7 +35,11 @@ export default function TabFeature() {
             data-test='tab-active-2'
           ></span>
         </Tabs.Trigger>
-        <Tabs.Trigger value='easy' className='relative' data-test='tab-3'>
+        <Tabs.Trigger
+          value='easy'
+          className='relative sm:w-full'
+          data-test='tab-3'
+        >
           Easy Sharing
           <span className='divider-bottom'></span>
           <span
