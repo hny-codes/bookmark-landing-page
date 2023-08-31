@@ -124,6 +124,10 @@
   }
 
   .tab-bar {
-    @apply after:content-[''] after:absolute after:bg-[--clr-soft-red] after:w-5/12 after:mx-auto after:h-[5px] after:left-0 after:right-0 after:-bottom-3;
+    @apply after:content-[''] after:absolute after:bg-[--clr-soft-red] after:w-5/12 sm:after:w-full after:mx-auto after:h-[5px] after:left-0 after:right-0 after:-bottom-3;
+  }
+
+  .content-wrapper {
+    @apply sm:max-w-[--max-w] sm:mx-auto;
   }
 }
