@@ -44,4 +44,56 @@ describe('Bookmark Tests', { retries: 5 }, () => {
     cy.get('[data-test="hero-btn"]').contains(/Get it on Chrome/i);
     cy.get('[data-test="hero-btn-secondary"]').contains(/Get it on Firefox/i);
   });
+
+  it('Features Section', () => {
+    // Mobile
+    cy.viewport('iphone-8');
+    cy.get('[data-test="features-header"]').contains(/Features/i);
+
+    // Tab component
+
+    // Create Aliases
+    cy.get('[data-test="tab-1"]').as('tab1');
+    cy.get('[data-test="tab-2"]').as('tab2');
+    cy.get('[data-test="tab-3"]').as('tab3');
+
+    cy.get('[data-test="tab-active-1"]').as('t1-active');
+    cy.get('[data-test="tab-active-2"]').as('t2-active');
+    cy.get('[data-test="tab-active-3"]').as('t3-active');
+
+    cy.get('[data-test="tab-1-content"]').as('t1-content');
+    cy.get('[data-test="tab-2-content"]').as('t2-content');
+    cy.get('[data-test="tab-3-content"]').as('t3-content');
+
+    // Test tab 1 - initial
+    cy.get('@t1-active').should('have.class', 'tab-bar');
+    cy.get('@t2-active').should('not.have.class', 'tab-bar');
+    cy.get('@t3-active').should('not.have.class', 'tab-bar');
+
+    cy.get('@t1-content').should('be.visible');
+    cy.get('@t2-content').should('not.be.visible');
+    cy.get('@t3-content').should('not.be.visible');
+
+    // Test tab 2
+    cy.get('@tab2').click();
+
+    cy.get('@t1-active').should('not.have.class', 'tab-bar');
+    cy.get('@t2-active').should('have.class', 'tab-bar');
+    cy.get('@t3-active').should('not.have.class', 'tab-bar');
+
+    cy.get('@t1-content').should('not.be.visible');
+    cy.get('@t2-content').should('be.visible');
+    cy.get('@t3-content').should('not.be.visible');
+
+    // Test tab 3
+    cy.get('@tab3').click();
+
+    cy.get('@t1-active').should('not.have.class', 'tab-bar');
+    cy.get('@t2-active').should('not.have.class', 'tab-bar');
+    cy.get('@t3-active').should('have.class', 'tab-bar');
+
+    cy.get('@t1-content').should('not.be.visible');
+    cy.get('@t2-content').should('not.be.visible');
+    cy.get('@t3-content').should('be.visible');
+  });
 });
