@@ -95,5 +95,39 @@ describe('Bookmark Tests', { retries: 5 }, () => {
     cy.get('@t1-content').should('not.be.visible');
     cy.get('@t2-content').should('not.be.visible');
     cy.get('@t3-content').should('be.visible');
+
+    // Desktop
+    cy.viewport(1000, 660);
+
+    // Test tab 1 - initial
+    cy.get('@t1-active').should('have.class', 'tab-bar');
+    cy.get('@t2-active').should('not.have.class', 'tab-bar');
+    cy.get('@t3-active').should('not.have.class', 'tab-bar');
+
+    cy.get('@t1-content').should('be.visible');
+    cy.get('@t2-content').should('not.be.visible');
+    cy.get('@t3-content').should('not.be.visible');
+
+    // Test tab 2
+    cy.get('@tab2').click();
+
+    cy.get('@t1-active').should('not.have.class', 'tab-bar');
+    cy.get('@t2-active').should('have.class', 'tab-bar');
+    cy.get('@t3-active').should('not.have.class', 'tab-bar');
+
+    cy.get('@t1-content').should('not.be.visible');
+    cy.get('@t2-content').should('be.visible');
+    cy.get('@t3-content').should('not.be.visible');
+
+    // Test tab 3
+    cy.get('@tab3').click();
+
+    cy.get('@t1-active').should('not.have.class', 'tab-bar');
+    cy.get('@t2-active').should('not.have.class', 'tab-bar');
+    cy.get('@t3-active').should('have.class', 'tab-bar');
+
+    cy.get('@t1-content').should('not.be.visible');
+    cy.get('@t2-content').should('not.be.visible');
+    cy.get('@t3-content').should('be.visible');
   });
 });
