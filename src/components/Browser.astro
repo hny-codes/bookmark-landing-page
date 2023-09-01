@@ -14,7 +14,7 @@ const {browserImg, browser, version} = Astro.props;
 
 ---
 
-<Card data-test='browser-card' className='text-center flex flex-col items-center max-w-[300px] py-4 mx-auto shadow-lg'>
+<Card data-test='browser-card' className='text-center flex flex-col items-center max-w-[300px] max-h-[360px] py-4 mx-auto sm:mx-0 shadow-lg'>
   <CardHeader className='flex flex-col items-center pt-10'>
     <Image src={browserImg} alt={`${browser} image`} width={90} height={90} class={'mb-6'} />
     <CardTitle className='pb-2 text-[--clr-very-dark-blue]'>Add to {browser}</CardTitle>
