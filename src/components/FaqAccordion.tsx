@@ -9,7 +9,7 @@ export default function FaqAccordion() {
   return (
     <Accordion type='single' collapsible>
       <AccordionItem value='item-1'>
-        <AccordionTrigger className='font-normal'>What is Bookmark?</AccordionTrigger>
+        <AccordionTrigger className='font-normal text-left'>What is Bookmark?</AccordionTrigger>
         <AccordionContent className='text-[--clr-grayish-blue] text-lg leading-loose pb-8 w-[90%]'>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
           tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum quis
@@ -17,7 +17,7 @@ export default function FaqAccordion() {
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value='item-2'>
-        <AccordionTrigger className='font-normal'>How can I request a new browser?</AccordionTrigger>
+        <AccordionTrigger className='font-normal text-left'>How can I request a new browser?</AccordionTrigger>
         <AccordionContent className='text-[--clr-grayish-blue] text-lg leading-loose pb-8 w-[90%]'>
           Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa,
           ultricies non ligula. Suspendisse imperdiet. Vivamus luctus eros
@@ -27,7 +27,7 @@ export default function FaqAccordion() {
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value='item-3'>
-        <AccordionTrigger className='font-normal'> Is there a mobile app?</AccordionTrigger>
+        <AccordionTrigger className='font-normal text-left'> Is there a mobile app?</AccordionTrigger>
         <AccordionContent className='text-[--clr-grayish-blue] text-lg leading-loose pb-8 w-[90%]'>
           Sed consectetur quam id neque fermentum accumsan. Praesent luctus
           vestibulum dolor, ut condimentum urna vulputate eget. Cras in ligula
@@ -36,7 +36,7 @@ export default function FaqAccordion() {
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value='item-4'>
-        <AccordionTrigger className='font-normal'>What about other Chromium browsers?</AccordionTrigger>
+        <AccordionTrigger className='font-normal text-left'>What about other Chromium browsers?</AccordionTrigger>
         <AccordionContent className='text-[--clr-grayish-blue] text-lg leading-loose pb-8 w-[90%]'>
           Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat
           mi, at euismod dui. Aliquam vitae neque eget nisl gravida pellentesque
