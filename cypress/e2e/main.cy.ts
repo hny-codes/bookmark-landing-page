@@ -128,4 +128,13 @@ describe('Bookmark Tests', { retries: 5 }, () => {
     cy.get('@t2-content').should('not.be.visible');
     cy.get('@t3-content').should('be.visible');
   });
+
+  it.only('Extension Section', () => {
+    cy.get('[data-test="extension-header"]').contains(
+      /Download the extension/i
+    );
+    
+    // Should have 3 browsers on page
+    cy.get('[data-test="browser-card"]').should('have.length', 3);
+  });
 });
