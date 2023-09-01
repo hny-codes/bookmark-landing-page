@@ -1,0 +1,29 @@
+---
+import {
+  Card,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardContent,
+  CardTitle,
+} from '@/components/ui/card'
+import { Button } from './ui/button';
+import { Image } from 'astro:assets';
+
+const {browserImg, browser, version} = Astro.props;
+
+---
+
+<Card data-test='browser-card' className='text-center flex flex-col items-center max-w-[300px] py-4 mx-auto shadow-lg'>
+  <CardHeader className='flex flex-col items-center pt-10'>
+    <Image src={browserImg} alt={`${browser} image`} width={90} height={90} class={'mb-6'} />
+    <CardTitle className='pb-2 text-[--clr-very-dark-blue]'>Add to {browser}</CardTitle>
+    <CardDescription className='pb-2 text-[--clr-grayish-blue]'>Minimum version {version}</CardDescription>
+  </CardHeader>
+  <CardContent className=''>
+    <svg xmlns='http://www.w3.org/2000/svg' width='280' height='4'><path fill='#495DCF' fill-opacity='.2' fill-rule='evenodd' d='M0 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm280 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-17 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-18 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-17 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm122 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-70 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM88 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM70 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM53 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM35 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM18 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4z'/></svg>
+  </CardContent>
+  <CardFooter>
+    <Button variant={'btnPrimary'} size={'lg'}>Add & Install Extension</Button>
+  </CardFooter>
+</Card>
