@@ -1,12 +1,12 @@
 describe('Bookmark Tests', { retries: 5 }, () => {
   beforeEach(() => {
     cy.visit('/');
+
+    // Set viewport
+    cy.viewport('iphone-8');
   });
 
   it('Test navigation bar', () => {
-    // Set viewport
-    cy.viewport('iphone-8');
-
     // Menu should be closed by default
     cy.get('[data-test="menu"]').as('menu');
     cy.get('@menu').should('be.hidden');
@@ -46,8 +46,6 @@ describe('Bookmark Tests', { retries: 5 }, () => {
   });
 
   it('Features Section', () => {
-    // Mobile
-    cy.viewport('iphone-8');
     cy.get('[data-test="features-header"]').contains(/Features/i);
 
     // Tab component
