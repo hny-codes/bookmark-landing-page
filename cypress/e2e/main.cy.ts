@@ -133,8 +133,13 @@ describe('Bookmark Tests', { retries: 5 }, () => {
     cy.get('[data-test="extension-header"]').contains(
       /Download the extension/i
     );
-    
+
     // Should have 3 browsers on page
+    cy.get('[data-test="browser-card"]').should('have.length', 3);
+
+    cy.viewport(1000, 660);
+
+    // Should have 3 browsers on page again
     cy.get('[data-test="browser-card"]').should('have.length', 3);
   });
 });
