@@ -22,6 +22,8 @@ const buttonVariants = cva(
           'bg-[--clr-soft-blue] text-white hover:bg-transparent border-2 border-[--clr-soft-blue] hover:text-[--clr-soft-blue] hover:shadow-md',
         btnSecondary:
           'bg-transparent text-[--clr-very-dark-blue] hover:bg-transparent border-2 border-transparent hover:border-[--clr-very-dark-blue] shadow-lg',
+        btnSubmit:
+          'bg-[--clr-soft-red] text-white hover:bg-white border-2 border-[--clr-soft-blue] hover:text-[--clr-soft-red] hover:shadow-md',
       },
       size: {
         default: 'h-10 px-4 py-2',
@@ -29,6 +31,7 @@ const buttonVariants = cva(
         lg: 'h-11 rounded-md px-8',
         icon: 'h-10 w-10',
         main: 'h-11 px-4 py-2',
+        submit: 'py-3',
       },
     },
     defaultVariants: {
