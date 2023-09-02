@@ -197,7 +197,7 @@ describe('Bookmark Tests', { retries: 5 }, () => {
     cy.get('@ac-content-4').should('be.visible');
   });
 
-  it.only('Contact Section', () => {
+  it('Contact Section', () => {
     cy.get('[data-test="contact-input"]').as('contact-input');
     cy.get('[data-test="submit-btn"]').as('btn');
     cy.get('[data-test="invalid-message"]').should('not.exist');
@@ -213,4 +213,11 @@ describe('Bookmark Tests', { retries: 5 }, () => {
     cy.get('@btn').click();
     cy.get('[data-test="invalid-message"]').should('not.exist');
   });
+
+  it.only('Footer Section', () => {
+    // Should have 5 links
+    cy.get('footer').within(() => {
+      cy.get('a').should('have.length', 5);
+    })
+  })
 });
