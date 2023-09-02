@@ -16,13 +16,13 @@ export default function ContactForm() {
   const onSubmit = handleSubmit((email) => console.log(email));
 
   return (
-    <form onSubmit={onSubmit}>
-      <div className='text-black relative'>
+    <form onSubmit={onSubmit} className='sm:flex sm:gap-4'>
+      <div className='text-black relative sm:flex-grow'>
         <input
           data-test='contact-input'
-          className={`w-[98%] mx-auto py-2 mb-4 px-6 z-20 rounded-md ${
+          className={`w-[98%] sm:w-full sm:h-full mx-auto py-2 mb-4 px-6 z-20 relative rounded-md ${
             errors.email &&
-            'outline-none outline-offset-0 outline-[--clr-soft-red] rounded-b-none'
+            'outline-none outline-offset-0 outline-[--clr-soft-red]'
           }`}
           placeholder='Enter your email address'
           {...register('email', {
@@ -30,15 +30,16 @@ export default function ContactForm() {
             pattern: /[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/,
           })}
         />
-        {/* <span className='bg-[--clr-soft-red] inset-0 p-4 absolute z-10'></span> */}
+
         {errors.email && (
-          <p data-test='invalid-message' className='bg-[--clr-soft-red] mb-2 relative -top-4 w-[99.2%] mx-auto rounded-b-lg text-left pl-4 py-2 italic text-white text-sm'>
+          <p className='bg-[--clr-soft-red] w-full pt-12 absolute rounded-md top-0 sm:top-4 z-10 italic text-white text-sm text-left pl-4 pb-2'>
             Whoops, make sure it's an email!
           </p>
         )}
+
         {errors.email && (
           <svg
-            className='absolute top-[0.6rem] right-4'
+            className='absolute top-[0.6rem] right-4 sm:top-[1.1rem] z-20'
             xmlns='http://www.w3.org/2000/svg'
             width='20'
             height='20'
@@ -58,7 +59,9 @@ export default function ContactForm() {
         type='submit'
         variant={'btnSubmit'}
         size={'submit'}
-        className='w-full flex-grow px-4'
+        className={`w-full sm:w-0 flex-grow  sm:flex-shrink px-4 ${
+          errors.email && 'mt-10 sm:mt-0'
+        }`}
       >
         Contact Us
       </Button>
