@@ -143,7 +143,7 @@ describe('Bookmark Tests', { retries: 5 }, () => {
     cy.get('[data-test="browser-card"]').should('have.length', 3);
   });
 
-  it.only('FAQ Section', () => {
+  it('FAQ Section', () => {
     cy.get('[data-test="faq-header"]').contains(/Frequently Asked Questions/i);
     cy.get('[data-test="accordion"]').should('be.visible');
 
@@ -195,5 +195,22 @@ describe('Bookmark Tests', { retries: 5 }, () => {
     cy.get('@ac-content-4').should('not.be.visible');
     cy.get('@ac-trigger-4').click();
     cy.get('@ac-content-4').should('be.visible');
+  });
+
+  it.only('Contact Section', () => {
+    cy.get('[data-test="contact-input"]').as('contact-input');
+    cy.get('[data-test="submit-btn"]').as('btn');
+    cy.get('[data-test="invalid-message"]').should('not.exist');
+
+    // Test for invalid input
+    cy.get('@contact-input').type('testmail.com');
+    cy.get('@btn').click();
+    cy.get('[data-test="invalid-message"]').should('exist');
+
+    // Test for valid input
+    cy.get('@contact-input').clear();
+    cy.get('@contact-input').type('realemail@yahoo.com');
+    cy.get('@btn').click();
+    cy.get('[data-test="invalid-message"]').should('not.exist');
   });
 });
