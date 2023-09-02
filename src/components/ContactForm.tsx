@@ -32,7 +32,7 @@ export default function ContactForm() {
         />
 
         {errors.email && (
-          <p className='bg-[--clr-soft-red] w-full pt-12 absolute rounded-md top-0 sm:top-4 z-10 italic text-white text-sm text-left pl-4 pb-2'>
+          <p data-test='invalid-message' className='bg-[--clr-soft-red] w-full pt-12 absolute rounded-md top-0 sm:top-4 z-10 italic text-white text-sm text-left pl-4 pb-2'>
             Whoops, make sure it's an email!
           </p>
         )}
@@ -59,7 +59,7 @@ export default function ContactForm() {
         type='submit'
         variant={'btnSubmit'}
         size={'submit'}
-        className={`w-full sm:w-0 flex-grow  sm:flex-shrink px-4 ${
+        className={`w-full sm:w-0 flex-grow  sm:flex-shrink px-4 sm:px-0 ${
           errors.email && 'mt-10 sm:mt-0'
         }`}
       >
