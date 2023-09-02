@@ -175,5 +175,25 @@ describe('Bookmark Tests', { retries: 5 }, () => {
     cy.get('@ac-content-4').should('not.be.visible');
     cy.get('@ac-trigger-4').click();
     cy.get('@ac-content-4').should('be.visible');
+
+    // Desktop
+    cy.viewport(1000, 660);
+
+    // Rerun tests
+    cy.get('@ac-content-1').should('not.be.visible');
+    cy.get('@ac-trigger-1').click();
+    cy.get('@ac-content-1').should('be.visible');
+
+    cy.get('@ac-content-2').should('not.be.visible');
+    cy.get('@ac-trigger-2').click();
+    cy.get('@ac-content-2').should('be.visible');
+
+    cy.get('@ac-content-3').should('not.be.visible');
+    cy.get('@ac-trigger-3').click();
+    cy.get('@ac-content-3').should('be.visible');
+
+    cy.get('@ac-content-4').should('not.be.visible');
+    cy.get('@ac-trigger-4').click();
+    cy.get('@ac-content-4').should('be.visible');
   });
 });
