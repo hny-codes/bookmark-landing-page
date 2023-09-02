@@ -215,6 +215,9 @@ describe('Bookmark Tests', { retries: 5 }, () => {
   });
 
   it.only('Footer Section', () => {
+    // Should exist
+    cy.get('footer').should('exist');
+
     // Should have 5 links
     cy.get('footer').within(() => {
       cy.get('a').should('have.length', 5);
