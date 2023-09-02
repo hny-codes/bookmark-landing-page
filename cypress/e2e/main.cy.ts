@@ -129,7 +129,7 @@ describe('Bookmark Tests', { retries: 5 }, () => {
     cy.get('@t3-content').should('be.visible');
   });
 
-  it.only('Extension Section', () => {
+  it('Extension Section', () => {
     cy.get('[data-test="extension-header"]').contains(
       /Download the extension/i
     );
@@ -141,5 +141,39 @@ describe('Bookmark Tests', { retries: 5 }, () => {
 
     // Should have 3 browsers on page again
     cy.get('[data-test="browser-card"]').should('have.length', 3);
+  });
+
+  it.only('FAQ Section', () => {
+    cy.get('[data-test="faq-header"]').contains(/Frequently Asked Questions/i);
+    cy.get('[data-test="accordion"]').should('be.visible');
+
+    // Get accordion trigger tabs
+    cy.get('[data-test="accordion-trigger-1"]').as('ac-trigger-1');
+    cy.get('[data-test="accordion-trigger-2"]').as('ac-trigger-2');
+    cy.get('[data-test="accordion-trigger-3"]').as('ac-trigger-3');
+    cy.get('[data-test="accordion-trigger-4"]').as('ac-trigger-4');
+
+    // Get accordion content
+    cy.get('[data-test="accordion-content-1"]').as('ac-content-1');
+    cy.get('[data-test="accordion-content-2"]').as('ac-content-2');
+    cy.get('[data-test="accordion-content-3"]').as('ac-content-3');
+    cy.get('[data-test="accordion-content-4"]').as('ac-content-4');
+
+    // Make sure content is initially invisible, visible after clicking
+    cy.get('@ac-content-1').should('not.be.visible');
+    cy.get('@ac-trigger-1').click();
+    cy.get('@ac-content-1').should('be.visible');
+
+    cy.get('@ac-content-2').should('not.be.visible');
+    cy.get('@ac-trigger-2').click();
+    cy.get('@ac-content-2').should('be.visible');
+
+    cy.get('@ac-content-3').should('not.be.visible');
+    cy.get('@ac-trigger-3').click();
+    cy.get('@ac-content-3').should('be.visible');
+
+    cy.get('@ac-content-4').should('not.be.visible');
+    cy.get('@ac-trigger-4').click();
+    cy.get('@ac-content-4').should('be.visible');
   });
 });
