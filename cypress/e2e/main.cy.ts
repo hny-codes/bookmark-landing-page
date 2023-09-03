@@ -214,7 +214,7 @@ describe('Bookmark Tests', { retries: 5 }, () => {
     cy.get('[data-test="invalid-message"]').should('not.exist');
   });
 
-  it.only('Footer Section', () => {
+  it('Footer Section', () => {
     // Should exist
     cy.get('footer').should('exist');
 
