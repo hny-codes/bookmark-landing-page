@@ -8,8 +8,8 @@ export default function Navbar() {
   };
 
   return (
-    <nav className=''>
-      <div className='layout-padding sm:max-w-[--max-w] sm:mx-auto fixed sm:relative top-0 w-full z-50 bg-white'>
+    <header className=''>
+      <nav className='layout-padding sm:max-w-[--max-w] sm:mx-auto fixed sm:relative top-0 w-full z-50 bg-white'>
         {/* Mobile */}
         <div className='flex items-center justify-between'>
           {/* Logo */}
@@ -129,7 +129,7 @@ export default function Navbar() {
             </div>
           </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </header>
   );
 }
