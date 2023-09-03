@@ -68,10 +68,20 @@ module.exports = {
           from: { height: 'var(--radix-accordion-content-height)' },
           to: { height: 0 },
         },
+        'menu-open': {
+          from: { opacity: 0, transform: 'translateY(-300px)' },
+          to: { opacity: 1, transform: 'translateY(0)' },
+        },
+        'menu-close': {
+          from: { opacity: 1, transform: 'translateY(0)' },
+          to: { opacity: 0, transform: 'translateY(-300px)' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        'menu-open': 'menu-open 0.2s ease-out',
+        'menu-close': 'menu-close 0.2s ease-out',
       },
     },
   },

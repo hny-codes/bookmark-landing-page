@@ -49,8 +49,8 @@ export default function Navbar() {
           <div
             data-test='menu'
             className={`${
-              menu ? 'visible' : 'invisible'
-            } bg-[--clr-very-dark-blue-opacity] fixed w-full h-full left-0 top-0 text-white md:hidden`}
+              menu ? 'visible animate-menu-open' : 'invisible animate-menu-close'
+            } bg-[--clr-very-dark-blue-opacity] fixed w-full h-full left-0 top-0 text-white md:hidden transition-all`}
           >
             <div className='flex items-center justify-between layout-padding'>
               {/* Menu Logo */}
