@@ -2,27 +2,27 @@
 import { Button } from '@/components/ui/button';
 ---
 
-<main class='mt-32 sm:mt-10'>
+<main class='mt-32 md:mt-10 sm:mt-4 pb-14 sm:pb-0'>
   <div
-    class='grid grid-rows-2 sm:grid-cols-2 sm:grid-rows-none sm:max-w-[--max-w] sm:mx-auto sm:layout-padding'
+    class='grid grid-rows-2 md:grid-cols-2 md:grid-rows-none md:max-w-[--max-w] md:mx-auto md:layout-padding'
   >
     <!-- illus -->
-    <div class='relative sm:order-2 sm:left-24'>
-      <img src='/images/illustration-hero.svg' alt='hero image' />
+    <div class='relative md:order-2 md:left-24'>
+      <img src='/images/illustration-hero.svg' alt='hero image' class="mx-auto" />
       <span class='hero-bg'></span>
     </div>
-    <div class='self-center text-center sm:text-left mt-8'>
-      <h1 data-test='hero-header' class='text-4xl sm:text-6xl font-medium'>
+    <div class=' sm:self-start text-center md:text-left mt-8 sm:mt-0'>
+      <h1 data-test='hero-header' class='text-4xl md:text-6xl font-medium px-4'>
         A Simple Bookmark Manager
       </h1>
       <p
         data-test='hero-subheader'
-        class='mt-6 text-[--clr-grayish-blue] w-4/5 mx-auto sm:w-4/5 sm:text-xl sm:mx-0'
+        class='mt-6 text-[--clr-grayish-blue] w-4/5 mx-auto md:w-full md:text-xl md:mx-0'
       >
         A clean and simple interface to organize your favourite websites. Open a
         new browser tab and see your sites load instantly. Try it for free.
       </p>
-      <div class='mt-6 [&>*]:mx-2 sm:[&>*]:ml-0 sm:[&>*]:mr-4'>
+      <div class='mt-6 [&>*]:mx-2 md:[&>*]:ml-0 md:[&>*]:mr-4'>
         <Button data-test='hero-btn' variant={'btnPrimary'} size={'main'}>
           Get it on Chrome
         </Button>

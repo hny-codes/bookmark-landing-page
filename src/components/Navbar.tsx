@@ -34,7 +34,7 @@ export default function Navbar() {
           <button
             data-test='menu-open'
             onClick={handleClick}
-            className='sm:hidden'
+            className='md:hidden'
           >
             <svg xmlns='http://www.w3.org/2000/svg' width='18' height='15'>
               <path
@@ -50,7 +50,7 @@ export default function Navbar() {
             data-test='menu'
             className={`${
               menu ? 'visible' : 'invisible'
-            } bg-[--clr-very-dark-blue-opacity] fixed w-full h-full left-0 top-0 text-white sm:hidden`}
+            } bg-[--clr-very-dark-blue-opacity] fixed w-full h-full left-0 top-0 text-white md:hidden`}
           >
             <div className='flex items-center justify-between layout-padding'>
               {/* Menu Logo */}
@@ -109,7 +109,7 @@ export default function Navbar() {
           </div>
 
           {/* Desktop */}
-          <div data-test='desktop-nav-items' className='sm:block hidden'>
+          <div data-test='desktop-nav-items' className='md:block hidden'>
             <div className='flex items-center gap-7 uppercase text-[--clr-very-dark-blue'>
               <a href='#' className='py-2 px-3 menu-hover'>
                 Features

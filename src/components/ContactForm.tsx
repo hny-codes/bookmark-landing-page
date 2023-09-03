@@ -59,7 +59,7 @@ export default function ContactForm() {
         type='submit'
         variant={'btnSubmit'}
         size={'submit'}
-        className={`w-full sm:w-0 flex-grow  sm:flex-shrink px-4 sm:px-0 ${
+        className={`w-full sm:w-0 sm:min-w-[100px] flex-grow sm:flex-shrink px-4 sm:px-0 ${
           errors.email && 'mt-10 sm:mt-0'
         }`}
       >

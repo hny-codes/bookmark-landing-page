@@ -108,7 +108,7 @@
   }
 
   .hero-bg {
-    @apply before:content-[''] before:bg-[--clr-soft-blue] before:w-full before:h-4/5 before:absolute before:top-16 before:-z-10 before:rounded-tl-full before:rounded-bl-full before:left-16 sm:before:top-28;
+    @apply before:content-[''] before:bg-[--clr-soft-blue] before:w-full  before:h-4/5 before:absolute before:top-16 before:-z-10 before:rounded-tl-full before:rounded-bl-full before:left-16 lg:before:top-28 sm:before:top-20;
   }
 
   .illus-bg {
