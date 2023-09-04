@@ -108,7 +108,7 @@
   }
 
   .hero-bg {
-    @apply before:content-[''] before:bg-[--clr-soft-blue] before:w-full  before:h-4/5 before:absolute before:top-16 before:-z-10 before:rounded-tl-full before:rounded-bl-full before:left-16 lg:before:top-28 sm:before:top-20;
+    @apply before:content-[''] before:bg-[--clr-soft-blue] before:w-4/5 before:h-[35%] before:absolute before:rounded-tl-full before:rounded-bl-full before:top-16 before:right-0 sm:before:top-28 md:before:h-[70%] md:before:top-36 md:before:w-2/5;
   }
 
   .illus-bg {
@@ -116,11 +116,11 @@
   }
 
   .divider-top {
-    @apply before:content-[''] before:absolute before:bg-[--clr-grayish-blue] before:w-full before:h-[1px] before:left-0 before:-top-2; 
+    @apply before:content-[''] before:absolute before:bg-[--clr-grayish-blue] before:w-full before:h-[1px] before:left-0 before:-top-2;
   }
 
   .divider-bottom {
-    @apply after:content-[''] after:absolute after:bg-[--clr-grayish-blue] after:w-full after:h-[1px] after:left-0 after:-bottom-3; 
+    @apply after:content-[''] after:absolute after:bg-[--clr-grayish-blue] after:w-full after:h-[1px] after:left-0 after:-bottom-3;
   }
 
   .tab-bar {
