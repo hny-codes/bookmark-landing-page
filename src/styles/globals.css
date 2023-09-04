@@ -115,6 +115,10 @@
     @apply before:content-[''] before:bg-[--clr-soft-blue] before:w-full before:h-full before:absolute before:top-9 before:-z-10 before:rounded-tr-full before:rounded-br-full before:-left-16 sm:before:top-28;
   }
 
+  .illus {
+    @apply before:content-[''] before:bg-[--clr-soft-blue] before:w-[80%] before:h-[30%] before:absolute before:bottom-[12.5rem] before:left-0 before:rounded-r-full md:before:h-[65%] md:before:w-[45%] md:before:-bottom-2;
+  }
+
   .divider-top {
     @apply before:content-[''] before:absolute before:bg-[--clr-grayish-blue] before:w-full before:h-[1px] before:left-0 before:-top-2;
   }
