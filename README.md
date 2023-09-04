@@ -8,8 +8,8 @@ This is a solution to the [Bookmark landing page challenge on Frontend Mentor](h
 
 - [Overview](#overview)
 - [The challenge](#the-challenge)
-- [Built with]()
-- [Useful resources]()
+- [Built with](#built-with)
+- [Useful resources](#useful-resources)
 
 ## Overview
 
