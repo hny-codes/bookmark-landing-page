@@ -65,9 +65,9 @@ export default function TabFeature() {
           {/* <span className='illus-bg sm:before:-left-28 sm:before:top-14'></span> */}
         </div>
         <div className='sm:w-3/5 sm:mx-auto'>
-          <h1 className='text-2xl md:text-4xl font-bold text-[--clr-very-dark-blue] mt-16 '>
+          <h2 className='text-2xl md:text-4xl font-bold text-[--clr-very-dark-blue] mt-16 '>
             Bookmark in one click
-          </h1>
+          </h2>
           <p className='text-[--clr-grayish-blue] mt-4'>
             Organize your bookmarks however you like. Our simple drag-and-drop
             interface gives you complete control over how you manage your
@@ -96,9 +96,9 @@ export default function TabFeature() {
           {/* <span className='illus-bg sm:before:-left-28 sm:before:top-8'></span> */}
         </div>
         <div className='sm:w-3/5 sm:mx-auto'>
-          <h1 className='text-2xl sm:text-4xl font-bold text-[--clr-very-dark-blue] mt-16'>
+          <h2 className='text-2xl sm:text-4xl font-bold text-[--clr-very-dark-blue] mt-16'>
             Intelligent search
-          </h1>
+          </h2>
           <p className='text-[--clr-grayish-blue] mt-4'>
             Our powerful search feature will help you find saved sites in no
             time at all. No need to trawl through all your bookmarks.
@@ -126,9 +126,9 @@ export default function TabFeature() {
           {/* <span className='illus-bg sm:before:-left-28 sm:before:top-8'></span> */}
         </div>
         <div className='sm:w-3/5 sm:mx-auto'>
-          <h1 className='text-2xl sm:text-4xl font-bold text-[--clr-very-dark-blue] mt-16'>
+          <h2 className='text-2xl sm:text-4xl font-bold text-[--clr-very-dark-blue] mt-16'>
             Share your bookmarks
-          </h1>
+          </h2>
           <p className='text-[--clr-grayish-blue] mt-4'>
             Easily share your bookmarks and collections with others. Create a
             shareable link that you can send at the click of a button.

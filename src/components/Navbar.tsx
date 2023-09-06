@@ -49,7 +49,9 @@ export default function Navbar() {
           <div
             data-test='menu'
             className={`${
-              menu ? 'visible animate-menu-open' : 'invisible animate-menu-close'
+              menu
+                ? 'visible animate-menu-open'
+                : 'invisible animate-menu-close'
             } bg-[--clr-very-dark-blue-opacity] fixed w-full h-full left-0 top-0 text-white md:hidden transition-all`}
           >
             <div className='flex items-center justify-between layout-padding'>
@@ -83,23 +85,36 @@ export default function Navbar() {
             </div>
             <ul className='flex flex-col place-items-center gap-4 text-2xl uppercase tracking-widest text-center px-8 py-4'>
               <li className='border-t border-[--clr-grayish-blue] w-full pt-4 menu-hover'>
-                <a href='#' className='inline-block w-full'>
+                <a
+                  href='#'
+                  aria-label='Learn more about our features'
+                  className='inline-block w-full'
+                >
                   Features
                 </a>
               </li>
               <li className='border-t border-[--clr-grayish-blue] w-full pt-4 inline-block menu-hover'>
-                <a href='#' className='inline-block w-full'>
+                <a
+                  href='#'
+                  aria-label='Learn more about our pricing'
+                  className='inline-block w-full'
+                >
                   Pricing
                 </a>
               </li>
               <li className='border-t border-b border-[--clr-grayish-blue] w-full py-4 menu-hover'>
-                <a href='#' className='inline-block w-full'>
+                <a
+                  href='#'
+                  aria-label='Get in contact with us'
+                  className='inline-block w-full'
+                >
                   Contact
                 </a>
               </li>
               <li className='mt-4 w-full'>
                 <a
                   href='#'
+                  aria-label='Log into your account here'
                   className='py-2 outline rounded-lg flex-grow inline-block w-full hover:bg-white hover:text-[--clr-very-dark-blue] transition'
                 >
                   Login
@@ -111,17 +126,30 @@ export default function Navbar() {
           {/* Desktop */}
           <div data-test='desktop-nav-items' className='md:block hidden'>
             <div className='flex items-center gap-7 uppercase text-[--clr-very-dark-blue'>
-              <a href='#' className='py-2 px-3 menu-hover'>
+              <a
+                href='#'
+                aria-label='Learn more about our features'
+                className='py-2 px-3 menu-hover'
+              >
                 Features
               </a>
-              <a href='#' className='py-2 px-3 menu-hover'>
+              <a
+                href='#'
+                aria-label='Learn more about our pricing'
+                className='py-2 px-3 menu-hover'
+              >
                 Pricing
               </a>
-              <a href='#' className='py-2 px-3 menu-hover'>
+              <a
+                href='#'
+                aria-label='Get in contact with us'
+                className='py-2 px-3 menu-hover'
+              >
                 Contact
               </a>
               <a
                 href='#'
+                aria-label='Log into your account here'
                 className='bg-[--clr-soft-red] py-2 px-8 rounded-md text-white hover:bg-white hover:text-[--clr-soft-red] border-2 transition border-[--clr-soft-red]'
               >
                 Login
